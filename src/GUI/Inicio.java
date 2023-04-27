@@ -84,7 +84,7 @@ public class Inicio extends JPanel implements ActionListener {
 		
 		imagem = new ImageIcon("background2.png");
 		JLabel lblNewLabel = new JLabel(imagem);
-		lblNewLabel.setBounds(0, 0, 749,470);
+		lblNewLabel.setBounds(0, 0, 745,473);
 		this.add(lblNewLabel);
 	}
 	

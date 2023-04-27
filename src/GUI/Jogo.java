@@ -26,8 +26,8 @@ public class Jogo extends JPanel {
 	public void paint(Graphics g) {
 		super.paint(g);
 		// Plano de fundo
-		g.drawImage(Toolkit.getDefaultToolkit().getImage("Background.png"), 0,
-				0, this);
+		g.drawImage(Toolkit.getDefaultToolkit().getImage("Background1.png"), 0,
+				0, 749, 470, this);
 		
 		fruta.paint(g);
 		//snake.paint(g);
