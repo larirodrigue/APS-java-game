@@ -124,7 +124,7 @@ public class Cobra extends Thread implements KeyListener {
 	public void paint(Graphics g) {
 		No noTemp = primeiro;
 		for(int i = 0;i<nroNos;i++){ 
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("Snake.png"),
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("cobraa.png"),
 					noTemp.getCorpo().getPosX(), noTemp.getCorpo().getPosY(), comp);
 			noTemp = noTemp.getProx();
 		}
