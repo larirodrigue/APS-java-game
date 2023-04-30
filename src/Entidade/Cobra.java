@@ -64,7 +64,7 @@ public class Cobra extends Thread implements KeyListener {
 						||(primeiro.getCorpo().getPosY()+10 > Frame.tela.getHeight()-30)));
 	}
 	
-	private void addCorpo(Corpo corpo){
+ 	private void addCorpo(Corpo corpo){
 		nroNos++;
 		No novoNo = new No(corpo);
 		if(isVazia()){
@@ -77,7 +77,9 @@ public class Cobra extends Thread implements KeyListener {
 			primeiro = novoNo;
 		}
 	}
-	
+
+
+
 	public boolean crescer(Fruta fruta){
 		Corpo corpo = ultimo.getCorpo();
 		if(((corpo.getPosX() >= fruta.getPosX() && corpo.getPosX() <=fruta.getPosX()+10)||
@@ -136,7 +138,13 @@ public class Cobra extends Thread implements KeyListener {
 	public void paint(Graphics g) {
 		No noTemp = primeiro;
 		for(int i = 0;i<nroNos;i++){ 
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("Snake.png"),
+			if(i == 0) {
+				g.drawImage(Toolkit.getDefaultToolkit().getImage("cobraa.png"),
+				noTemp.getCorpo().getPosX(), noTemp.getCorpo().getPosY(), comp);
+				noTemp = noTemp.getProx();
+			continue;
+			}
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("cobracorpo.png"),
 					noTemp.getCorpo().getPosX(), noTemp.getCorpo().getPosY(), comp);
 			noTemp = noTemp.getProx();
 		}

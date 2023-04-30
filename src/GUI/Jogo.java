@@ -16,7 +16,7 @@ public class Jogo extends JPanel {
 	private FrutaDourada frutadourada;
 
 	public Jogo() {
-		cobra = new Cobra(10, this);
+		cobra = new Cobra(2, this);
 		fruta = new Fruta();
 		frutadourada = new FrutaDourada();
 		this.setSize(Frame.tela.getWidth()-6, Frame.tela.getHeight()-28);
