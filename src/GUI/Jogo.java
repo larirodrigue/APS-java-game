@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import Entidade.Cobra;
 import Entidade.Fruta;
 import Entidade.FrutaDourada;
+import Entidade.Lixo;
 
 public class Jogo extends JPanel {
 
@@ -14,11 +15,13 @@ public class Jogo extends JPanel {
 	private Fruta fruta;
 	private Cobra cobra;
 	private FrutaDourada frutadourada;
+	private Lixo lixo;
 
 	public Jogo() {
 		cobra = new Cobra(2, this);
 		fruta = new Fruta();
 		frutadourada = new FrutaDourada();
+		lixo = new Lixo();
 		this.setSize(Frame.tela.getWidth()-6, Frame.tela.getHeight()-28);
 		this.setFocusable(true);
 		addKeyListener(cobra);
@@ -34,6 +37,7 @@ public class Jogo extends JPanel {
 		
 		fruta.paint(g);
 		frutadourada.paint(g);
+		lixo.paint(g);
 		//snake.paint(g);
 		cobraCresce();
 		cobra.paint(g);
