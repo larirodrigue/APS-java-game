@@ -48,7 +48,7 @@ public class Lixo {
 	}
 	
 	public void paint(Graphics g){
-		g.drawImage(Toolkit.getDefaultToolkit().getImage("macadourada.png"),
+		g.drawImage(Toolkit.getDefaultToolkit().getImage("lixo.png"),
 				posX, posY, comp);
 	}
 } 
