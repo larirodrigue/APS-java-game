@@ -49,7 +49,10 @@ public class Jogo extends JPanel {
 		}
 		else if(cobra.crescer(frutadourada)){
 			frutadourada.criarLocal2();
-
+		}
+		else if(cobra.morrer(lixo)){
+			lixo.criarLocal3();
 		}
 	}
+	
 }

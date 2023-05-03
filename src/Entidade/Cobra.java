@@ -104,7 +104,19 @@ public class Cobra extends Thread implements KeyListener {
 		}
 		return false;
 	}
-	
+
+	public boolean morrer(Lixo lixo){
+		Corpo corpo = ultimo.getCorpo();
+		if(((corpo.getPosX() >= lixo.getPosX() && corpo.getPosX() <=lixo.getPosX()+10)||
+				(corpo.getPosX()+10>= lixo.getPosX() && corpo.getPosX()+10 <=lixo.getPosX()+10)) &&
+				((corpo.getPosY()>=lixo.getPosY() && corpo.getPosY() <= lixo.getPosY()+10)||
+				(corpo.getPosY()+10>=lixo.getPosY()&&corpo.getPosY()+7<=lixo.getPosY()+10))){
+			corpo = new Corpo();
+			addCorpo(corpo);
+			return true;
+		}
+		return false;
+	}
 	public void mover(int posicao){
 		if(posicao == 1){
 			primeiro.getCorpo().setPosX(ultimo.getCorpo().getPosX());
