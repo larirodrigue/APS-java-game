@@ -16,6 +16,7 @@ public class Jogo extends JPanel {
 	private Cobra cobra;
 	private FrutaDourada frutadourada;
 	private Lixo lixo;
+	private boolean perdeu = false;
 
 	public Jogo() {
 		cobra = new Cobra(2, this);
@@ -33,14 +34,15 @@ public class Jogo extends JPanel {
 		super.paint(g);
 		// Plano de fundo
 		g.drawImage(Toolkit.getDefaultToolkit().getImage("Background1.png"), 0,
-				0, 749, 470, this);
-		
+				0, 749, 480, this);
+		if(perdeu != true){
 		fruta.paint(g);
 		frutadourada.paint(g);
 		lixo.paint(g);
 		//snake.paint(g);
 		cobraCresce();
 		cobra.paint(g);
+		}
 	}
 	
 	public void cobraCresce(){
@@ -51,7 +53,7 @@ public class Jogo extends JPanel {
 			frutadourada.criarLocal2();
 		}
 		else if(cobra.morrer(lixo)){
-			lixo.criarLocal3();
+			perdeu = cobra.morrer(lixo);
 		}
 	}
 	

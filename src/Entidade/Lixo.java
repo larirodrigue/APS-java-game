@@ -41,12 +41,7 @@ public class Lixo {
 		posX = a.nextInt(Frame.tela.getWidth()-16);
 		posY = a.nextInt(Frame.tela.getHeight()-38);
 	}
-	
-	public void criarLocal3(){
-		posX = a.nextInt(Frame.tela.getWidth()-16);
-		posY = a.nextInt(Frame.tela.getHeight()-38);
-	}
-	
+
 	public void paint(Graphics g){
 		g.drawImage(Toolkit.getDefaultToolkit().getImage("lixo.png"),
 				posX, posY, comp);

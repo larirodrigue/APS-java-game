@@ -54,7 +54,6 @@ public class Cobra extends Thread implements KeyListener {
 			}
 		}
 	}
-	
 	private boolean Bateu(){
 		return (((primeiro.getCorpo().getPosX() < 0)||(primeiro.getCorpo().getPosX()+10<0))
 				|| ((primeiro.getCorpo().getPosX() > Frame.tela.getWidth())
@@ -111,8 +110,7 @@ public class Cobra extends Thread implements KeyListener {
 				(corpo.getPosX()+10>= lixo.getPosX() && corpo.getPosX()+10 <=lixo.getPosX()+10)) &&
 				((corpo.getPosY()>=lixo.getPosY() && corpo.getPosY() <= lixo.getPosY()+10)||
 				(corpo.getPosY()+10>=lixo.getPosY()&&corpo.getPosY()+7<=lixo.getPosY()+10))){
-			corpo = new Corpo();
-			addCorpo(corpo);
+			seColide();
 			return true;
 		}
 		return false;
